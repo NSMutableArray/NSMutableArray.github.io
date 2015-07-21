@@ -1,6 +1,6 @@
 name: 安静
-description: 时光机
-meta_description: "记录点点滴滴"
+description: 记录点点滴滴
+meta_description: ""
 
 markdown: redcarpet
 highlighter: pygments
