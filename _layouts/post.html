@@ -1,15 +1,14 @@
 ---
 layout: default
-disqus: true
-archive: true
+disqus: false
+archive: false
 post_class: post-template
-about: 'about.html'
 ---
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">首页</a>
-        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">订阅RSS</a>
+        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
+        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
     </nav>
 </header>
 
@@ -26,6 +25,25 @@ about: 'about.html'
                 {% endif %}
             </section>
         </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="{{site.url}}">
+                {% if site.logo %}
+                    <img src="{{site.logo}}" alt="{{ site.name }}" />
+                {% else %}
+                    <span class="blog-title">{{ site.name }}</span>
+                {%endif%} 
+            </a>
+        </header> -->
+        
+        <!-- <span class="post-meta">
+            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+            {% if page.categories.size > 0 %} 
+                {{ page.categories | array_to_sentence_string | prepend: 'on ' }} 
+            {% endif %}
+        </span> -->
+
+        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
 
         <section class="post-content">
             {{content}}
@@ -46,7 +64,7 @@ about: 'about.html'
             <!-- If we want to display author's name and bio -->
             {% if site.author %}
                 <figure class="author-image">
-                    <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.jpeg)">
+                    <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
                     <span class="hidden">{{site.author}}'s Picture</span></a>
                 </figure>
                 <section class="author">
@@ -54,20 +72,19 @@ about: 'about.html'
                     <h4> {{ site.author }} </h4>
                     <!-- Author Bio -->
                     <p> 
-                        iOS/Mac 開發者絕贊好評養成中、萌えアニメ好き。<br/>
-                 <a href='{{ site.baseurl }}{{ page.about }}'> 关于 小笠原 やきん</a> 
+                        Here goes the author description. You might want to place some links too in here
                     </p>
                 </section>                
             {% endif %}
-	    
-	    <!-- Share links section -->
-            {% include share.html %}
 
-	    <!-- Disqus comments -->
+            <!-- Share links section -->
+            {% include share.html %}
+            
+            <!-- Disqus comments -->
             {% if page.disqus %}
                 {% include disqus.html %}
             {% endif %}
-
+            
         </footer>
 
     </article>
