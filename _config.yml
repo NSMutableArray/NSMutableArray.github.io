@@ -1,5 +1,5 @@
-name: 安静
-description: 记录点点滴滴
+name: 非常自信
+description: 在通往牛逼的路上大步向前
 meta_description: ""
 
 markdown: redcarpet
@@ -16,4 +16,4 @@ redcarpet:
 
 # Details for the RSS feed generator
 url:            'http://nsmutablearray.github.io'
-author:         '安静'
+author:         '非常自信'
